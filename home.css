@@ -1,10 +1,10 @@
 body {
-  background-image: url('static/images/derek1.png');
-  background-repeat: no-repeat;
-  background-size: 32.5rem;
-  background-position: bottom;
-  background-blend-mode: multiply;
-  background-color: #ff7733;
+  background-image: url('static/images/derek1.png'), url('static/images/betaful3.png');
+  background-repeat: no-repeat, repeat;
+  background-size: 32.5rem, 15rem;
+  background-position: right bottom, center;
+  background-blend-mode: normal;
+  background-color: #3454d1;
 }
 
 a {
@@ -24,6 +24,6 @@ a:hover {
 }
 
 a:active {
-  color: yellow;
-  background-color: blue;
+  color: black;
+  background-color: rgb(255, 234, 17);
 }

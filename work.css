@@ -1,0 +1,9 @@
+body {
+  background-image: url('static/images/betaful3.png'), url('static/images/betaful4.png');
+  background-repeat: repeat;
+  background-size: 15rem;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  background-color: #3454d1;
+}
+

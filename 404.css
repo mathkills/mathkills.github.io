@@ -1,0 +1,29 @@
+body {
+  background-image: url('static/images/derek1.png');
+  background-repeat: no-repeat;
+  background-size: 32.5rem;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  background-color: #ff7733;
+}
+
+a {
+  color: white;
+  background-color: black;
+}
+
+a:link {
+  color: white;
+  background-color: black;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
+a:active {
+  color: yellow;
+  background-color: blue;
+}
