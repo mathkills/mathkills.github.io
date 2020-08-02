@@ -4,6 +4,6 @@ body {
   background-size: 20rem, 8rem;
   background-position: right bottom, left bottom;
   background-blend-mode: normal, normal;
-  background-attachment: fixed, fixed;
+  background-attachment: scroll, scroll;
   background-color: #f5f5f5;
 }

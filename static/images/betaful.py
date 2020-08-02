@@ -33,7 +33,7 @@ def figure02():
     plt.savefig('choicemodel1', transparent=True)
 
     plt.figure(figsize=(15,8))
-    plt.scatter(x, y, color='#00214e')
+    plt.scatter(x, y, color='k')
     plt.plot(x,1/(1+np.exp(-10*x)), color='#ffea47')
     plt.xlim(-1.1,1.1)
     plt.ylim(-.1,1.1)
@@ -43,17 +43,28 @@ def figure02():
 
 
 def figure03():
+    np.random.seed(450473)
     x = np.random.randn(900)
-    y = .5*x + np.random.randn(900)
-    z = -.5*x + np.random.randn(900)
-    plt.figure(figsize=(15,15))
-    plt.plot(x, y, '.', color='k', alpha=.2)
-    plt.plot(x, z, '.', color='k', alpha=.2)
+    y = -.3*x + np.random.randn(900)
+    z = .5*x + np.random.normal(0,.7,size=900)
 
-    plt.xlim(-4,4)
-    plt.ylim(-4,4)
+    plt.figure(figsize=(15,15))
+    plt.plot(x, y, '.', color='#7c7a76', alpha=.2)
+    plt.plot(x, z, '.', color='#7c7a76', alpha=.2)
+
+    plt.xlim(-5,5)
+    plt.ylim(-5,5)
     plt.axis(False)
     plt.savefig('cloud', transparent=True)
+
+    plt.figure(figsize=(15,15))
+    plt.plot(x, y, '.', color='#7c7a76', alpha=.2)
+    plt.plot(x, z, '.', color='#00214e', alpha=.5)
+
+    plt.xlim(-5,5)
+    plt.ylim(-5,5)
+    plt.axis(False)
+    plt.savefig('cloudcolor', transparent=True)
 
 
 figure03()
