@@ -86,30 +86,62 @@ def figure(n):
     elif n == 5:
         from matplotlib import image as mpimg
 
-        #bayes = mpimg.imread('./Thomas_Bayes.gif')
-        #bayes = bayes[:,:,0].astype(np.float64)
-        #m,n = bayes.shape[0],bayes.shape[1]
+        bayes = mpimg.imread('./Thomas_Bayes.gif')
+        bayes = bayes[:,:,0].astype(np.float64)
+        m,n = bayes.shape[0],bayes.shape[1]
+        print(m,n)
         #bayes=np.column_stack((bayes,bayes[:,::-1]))
-        #u,s,vh = np.linalg.svd(bayes/255., full_matrices=False)
-        #s[12:] = 0
-        #bayes = np.dot(u * s, vh)
-        ##plt.imshow(bayes, cmap='inferno')
+        u,s,vh = np.linalg.svd(bayes/255., full_matrices=False)
+        s[12:] = 0
+        bayes = np.dot(u * s, vh)
         #plt.imshow(np.row_stack((bayes,bayes[::-1])), cmap='inferno')
         #plt.axis(False)
         #plt.tight_layout()
         ##plt.savefig('bayesbayes_inferno.png', transparent=True, pad_inches=0)
         #plt.show()
 
+    elif n==6:
+        from matplotlib import image as mpimg
+
         wsg = mpimg.imread('./William_Sealy_Gosset.jpg')
         m,n = wsg.shape[0],wsg.shape[1]
-        wsg = np.row_stack((wsg,wsg,wsg))
-        plt.imshow(wsg, cmap='inferno')
+        plt.imshow(wsg)
         plt.axis(False)
         plt.tight_layout()
-        plt.savefig('multistudent_inferno.png', transparent=True)
-        #plt.show()
+        plt.show()
+        plt.imsave('student_viridis.png', wsg, format='png', cmap='viridis')
+
+
+    elif n==7:
+        from matplotlib import image as mpimg
         
-figure(5)
+        bayes = mpimg.imread('./Thomas_Bayes.gif')
+        bayes = bayes[:,:,0].astype(np.float64)
+        m,n = bayes.shape[0],bayes.shape[1]
+        u,s,vh = np.linalg.svd(bayes/255., full_matrices=False)
+        s[12:] = 0
+        bayes = np.dot(u * s, vh)
+        revbayes = bayes[:,::-1]
+        L1 = bayes[:m//3, :m//3]
+        R1 = revbayes[:m//3, -m//3 + 1:]
+        L2 = bayes[:m//3, -m//3+1:]
+        R2 = revbayes[:m//3, :m//3]
+
+        pic1 = np.column_stack((L2,L1,R1,R2))
+        pic2 = np.column_stack((L2,L1,R1,R2))
+
+        pic1 = np.row_stack((pic1[::-1],pic1))
+        pic2 = np.row_stack((pic2[::-1],pic2))
+
+        pic = np.row_stack((pic1,pic2))
+        print(pic.shape)
+
+        plt.imshow(pic, cmap='inferno')
+        plt.axis(False)
+        plt.show()
+        plt.imsave('background_viridis.png', pic, format='png', cmap='viridis_r')
+
+figure(6)
 
 
 
