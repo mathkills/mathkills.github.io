@@ -24,21 +24,7 @@ body {
   overflow: hidden;
 }
 
-.derkle {
-  position: relative;
-  left: 37%;
-  top: 13%;
-  width: 500px;
-  height: 500px;
-  background-color: rgba(0,0,0,.1);
-  background-image: url('static/images/derek1.png');
-  background-repeat: no-repeat;
-  background-position: 52% 1%;
-  background-size: 80rem;
-  border-radius: 50%;
-}
-
 p {
   font-size: 24px;
-  padding-left: 15px;
+  padding-left: 2rem;
 }
