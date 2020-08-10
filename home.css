@@ -21,6 +21,7 @@ body {
   background-position: bottom, center;
   background-attachment: fixed, scroll;
   background-size: auto 70%, 300rem;
+  overflow: hidden;
 }
 
 .derkle {

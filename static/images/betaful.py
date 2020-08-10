@@ -92,13 +92,14 @@ def figure(n):
         print(m,n)
         #bayes=np.column_stack((bayes,bayes[:,::-1]))
         u,s,vh = np.linalg.svd(bayes/255., full_matrices=False)
-        s[12:] = 0
+        s[1:] = 0
         bayes = np.dot(u * s, vh)
         #plt.imshow(np.row_stack((bayes,bayes[::-1])), cmap='inferno')
-        #plt.axis(False)
-        #plt.tight_layout()
-        ##plt.savefig('bayesbayes_inferno.png', transparent=True, pad_inches=0)
-        #plt.show()
+        plt.imshow(bayes, cmap='inferno')
+        plt.axis(False)
+        plt.tight_layout()
+        plt.show()
+        plt.imsave('compressedbayes_inferno.png', bayes, format='png', cmap='inferno')
 
     elif n==6:
         from matplotlib import image as mpimg
@@ -141,7 +142,7 @@ def figure(n):
         plt.show()
         plt.imsave('background_viridis.png', pic, format='png', cmap='viridis_r')
 
-figure(6)
+figure(5)
 
 
 
