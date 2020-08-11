@@ -1,10 +1,9 @@
 body {
-  background-image: url('static/images/derek1.png');
+  background-image: url('static/images/background_inferno.png'), url('static/images/derek1.png');
   background-repeat: no-repeat;
-  background-size: 32.5rem;
-  background-position: bottom;
+  background-size: cover, 32.5rem;
+  background-position: center, bottom;
   background-blend-mode: multiply;
-  background-color: #ff7733;
 }
 
 a {
