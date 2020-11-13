@@ -6,6 +6,11 @@ body {
   height: 100%;
 }
 
+a {
+  color: black;
+  text-decoration: underline;
+}
+
 .bigback {
   background-image: url('static/images/compressedbayes_inferno.png');
   background-repeat: repeat;
